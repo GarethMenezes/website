@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Gareth Menezes</title>
+    <link rel="Stylesheet" href="style.css">
     <meta name="viewport" content="width= device-width, initial-scale=1" />
     <style>
         .main-body {
@@ -18,12 +19,45 @@
             background-color: #808080;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
+        h2{
+            text-shadow: 1px 1px 1px black;
+        }
 
-        img:hover {
+        img{
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        img:hover{
             background-color: darkblue;
-            border: 232px;
-            width: 222px;
+            transform: scale(1.1);
           }
+
+         #h2{
+            color: red;
+            text-shadow: 3px 3px 5px black;
+            text-align: left;
+            animation: move 1s infinite alternate;
+
+          }
+
+    @keyframes move{
+        0%{transform: translateX(100px);}
+        100%{transform: translateX(10px);}
+    }
+
+    .arrow{
+        color: red;
+        text-shadow: 3px 3px 5px black;
+        font-size: 50px;
+        text-align: left;
+        display: block;
+        animation: bounce 1s infinite alternate;
+    }
+
+    @keyframes bounce{
+        0%{transform: translateY(0px);}
+        100%{transform: translateY(10px);}
+    }
+          
 
     </style>
 </head>
@@ -33,7 +67,17 @@
         <h1 id="beans">Hello,</h1>
         <h2>Coming Soon...</h2>
         <img src="image.png" alt="404 Error" style="width:300px;height:400px;" title="Error">
+        <h2 id="h2"> WATCH THE VIDEO BELOW (Not a Rick Roll)</h2>
+        <div class="arrow">⬇</div>
 
+
+    </div>
+    <div class="container">
+        <iframe width="100%" height="100%"
+         src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?si=NPMUm0q_5E-zEkAC&amp;controls=0&amp;start=4" 
+         title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+          gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
 
     </div>
 </body>
